@@ -11,7 +11,7 @@ def kryg(rastoyanie, r,color):
     else:
         pygame.draw.circle(screen, color, [350, 350], r, 5)
     if r > 0 and rastoyanie > 0:
-        color[0]-=5
+        color[0]-=4
         color[1]-=5
         color[2]-=5
         kryg(rastoyanie - 1, r - rastoyanie,color)
