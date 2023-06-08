@@ -3,7 +3,7 @@ import pygame, random
 screen = pygame.display.set_mode([700, 700])
 x = 350
 y = 350
-c = [88, 51, 202]
+l = [250,250,250]
 
 
 def romb(x, y, shag, shag2, shagshag,c):
@@ -51,7 +51,8 @@ while True:
         elif b.type == pygame.KEYDOWN and b.key == pygame.K_RIGHT:
             x -= 1
         if b.type == pygame.KEYDOWN and b.key == pygame.K_SPACE:
-            c=[random.randint(0,255),random.randint(0,255),random.randint(0,255)]
+            l=[random.randint(0,255),random.randint(0,255),random.randint(0,255)]
+    print(l)
+    romb(350, 350 + y, x, y, 20,l.copy())
 
-    romb(350, 350 + y, x, y, 20,c)
     pygame.display.flip()
